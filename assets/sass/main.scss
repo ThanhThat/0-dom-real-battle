@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  height: 100vh;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 72rem;
+}
+
+.tabs {
+  position: relative;
+  margin-top: 10rem;
+  display: flex;
+
+  &__item {
+    font-size: 2rem;
+    color: #c23564;
+    padding: 1.6rem 2rem 1.1rem 2rem;
+    display: inline-block;
+    min-width: 8rem;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #fff;
+    border-bottom: 6px solid transparent;
+    transition: all 0.5s ease;
+  }
+
+  &__item:hover {
+    background-color: #faf2f5;
+    border-bottom-color: #eea2bf;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0;
+    background-color: #c23564;
+    height: 6px;
+    border-radius: 1.5rem;
+    width: 0;
+  }
+
+  &__item.active {
+    opacity: 1;
+  }
+}
+
+.tab-content {
+  .tab-pane {
+    margin-top: 2rem;
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+}
